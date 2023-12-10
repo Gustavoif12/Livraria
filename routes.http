@@ -1,0 +1,31 @@
+POST http://localhost:3333/manga
+Content-Type: application/json
+
+{
+    "titulo": "Kagurabachi",
+    "mangaka": "Takeru Hokazono",
+    "quantidade_volume": 1
+}
+
+###
+
+GET http://localhost:3333/manga
+
+###
+
+GET http://localhost:3333/manga?search=Kagurabachi
+
+###
+
+PUT http://localhost:3333/manga/e755594e-ad4f-4e97-9c15-eb21a2b396cb
+Content-Type: application/json
+
+{
+    "titulo": "Doron Dororon",
+    "mangaka": "Gen Osuka",
+    "quantidade_volume": 5
+}
+
+###
+
+DELETE http://localhost:3333/manga/e755594e-ad4f-4e97-9c15-eb21a2b396cb
