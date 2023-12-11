@@ -4,20 +4,20 @@ export class DatabaseMemory {
   #mangas = new Map()
 
   list(search) {
-    return Array.from(this.#mangas.entries()).map((mangaArray) => {
-      const id = mangaArray[0]
+    return Array.from(this.#mangas.entries())
+      .map((mangaArray) => {
+        const id = mangaArray[0]
 
-      const data = mangaArray[1]
+        const data = mangaArray[1]
 
-      return {
-        id,
-        ...data,
-      }
-
-    })
-      .filter(manga => {
+        return {
+          id,
+          ...data,
+        }
+      })
+      .filter((manga) => {
         if (search) {
-          return manga.titulo.includes(search)
+          return manga.obra.includes(search)
         }
         return true
       })
